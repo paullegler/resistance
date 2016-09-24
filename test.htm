@@ -2,9 +2,29 @@
 <html>
 <body>
 
-<h1>My First Head</h1>
+<h1>My First Header</h1>
 
 <p>My first paragraph.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+var x = [1, 2, 3]
+var people = ["Cat"]
+document.write(x)
+// document.getElementById("demo").innerHTML = people;
+
+function myFunction() {
+    var person = prompt("Please enter your name", "Harry Potter");
+    people.push(person);
+    // document.getElementById("demo").innerHTML = people;
+    window.alert(people)
+}
+
+</script>
+
 
 </body>
 </html>
