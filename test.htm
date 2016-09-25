@@ -8,7 +8,14 @@
 
 <button onclick="myFunction()">Try it</button>
 
-<p id="demo"></p>
+First name:
+<input type="text" id="firstname">
+<br>
+<p>Your first name is: <b id='boldStuff2'></b>
+</p>
+<p>Other people's names:</p>
+<ol id="demo"></ol>
+<input type='button' onclick='changeText2()' value='Submit' />
 
 <script>
 var x = [1, 2, 3]
@@ -16,12 +23,24 @@ var people = ["Cat"]
 document.write(x)
 // document.getElementById("demo").innerHTML = people;
 
-function myFunction() {
-    var person = prompt("Please enter your name", "Harry Potter");
-    people.push(person);
-    // document.getElementById("demo").innerHTML = people;
-    window.alert(people)
+var list = document.getElementById('demo');
+
+function changeText2() {
+    var firstname = document.getElementById('firstname').value;
+    document.getElementById('boldStuff2').innerHTML = firstname;
+    var entry = document.createElement('li');
+    entry.appendChild(document.createTextNode(firstname));
+    list.appendChild(entry);
 }
+
+// 
+// function myFunction() {
+//     var person = prompt("Please enter your name", "Harry Potter");
+//     people.push(person);
+//     // document.getElementById("demo").innerHTML = people;
+//     window.alert(people)
+// }
+
 
 </script>
 
